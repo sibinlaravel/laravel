@@ -16,7 +16,10 @@ class User extends Authenticatable
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
+     * 
      */
+
+    protected $table="users";
     protected $fillable = [
         'name',
         'email',
@@ -42,4 +45,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function Sibin(){
+        //return $this->hasMany('App\Models\Userdatas');
+        return $this->hasMany(Userdatas::class);
+    }
 }

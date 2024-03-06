@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\Controllers\schoolController;
+
+
+Route::get('/login',[schoolController::class,'getLogin'])->name(name:'login');
+Route::get('/register',[schoolController::class,'getRegister']);
+Route::post('/register',[schoolController::class,'postRegister']);
+
+
+
+
+
+
+
+
+ 

@@ -168,6 +168,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Aws\Laravel\AwsServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -183,6 +185,22 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'AWS' => Aws\Laravel\AwsFacade::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+        
     ])->toArray(),
+
+
+    // 'providers' => array(
+    //     // ...
+    //     Aws\Laravel\AwsServiceProvider::class,
+    // ),
+
+    // 'aliases' => array(
+    //     // ...
+    //     'AWS' => Aws\Laravel\AwsFacade::class,
+    // ),
+
+
 
 ];
